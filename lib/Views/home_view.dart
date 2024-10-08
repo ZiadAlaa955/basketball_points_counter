@@ -20,27 +20,88 @@ class HomeView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Text(
-            'Team A',
-            style: TextStyle(
-              fontSize: 28,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  const Text(
+                    'Team A',
+                    style: TextStyle(
+                      fontSize: 28,
+                    ),
+                  ),
+                  const Text(
+                    '0',
+                    style: TextStyle(fontSize: 150),
+                  ),
+                  CustomElevetedButtom(
+                    onPressed: () {},
+                    text: 'Add 1 point',
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  CustomElevetedButtom(
+                    onPressed: () {},
+                    text: 'Add 1 points',
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  CustomElevetedButtom(
+                    onPressed: () {},
+                    text: 'Add 3 points',
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 500,
+                child: VerticalDivider(
+                  indent: 60,
+                  endIndent: 40,
+                ),
+              ),
+              Column(
+                children: [
+                  const Text(
+                    'Team B',
+                    style: TextStyle(
+                      fontSize: 28,
+                    ),
+                  ),
+                  const Text(
+                    '0',
+                    style: TextStyle(fontSize: 150),
+                  ),
+                  CustomElevetedButtom(
+                    onPressed: () {},
+                    text: 'Add 1 point',
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  CustomElevetedButtom(
+                    onPressed: () {},
+                    text: 'Add 1 points',
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  CustomElevetedButtom(
+                    onPressed: () {},
+                    text: 'Add 3 points',
+                  ),
+                ],
+              )
+            ],
           ),
-          const Text(
-            '0',
-            style: TextStyle(fontSize: 150),
+          SizedBox(
+            height: 40,
           ),
           CustomElevetedButtom(
             onPressed: () {},
-            text: 'Add 1 point',
-          ),
-          CustomElevetedButtom(
-            onPressed: () {},
-            text: 'Add 1 points',
-          ),
-          CustomElevetedButtom(
-            onPressed: () {},
-            text: 'Add 3 points',
+            text: 'Reset',
           ),
         ],
       ),
