@@ -27,7 +27,9 @@ class TeamBoard extends StatelessWidget {
         ),
         Text(
           score.toString(),
-          style: const TextStyle(fontSize: 150),
+          style: score < 100
+              ? const TextStyle(fontSize: 150)
+              : const TextStyle(fontSize: 100),
         ),
         CustomElevatedButton(
           onPressed: button1,
