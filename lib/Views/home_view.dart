@@ -1,4 +1,5 @@
 import 'package:basketball_points_counter/Widgets/custom_elevated_button.dart';
+import 'package:basketball_points_counter/Widgets/team_board.dart';
 import 'package:basketball_points_counter/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -23,37 +24,12 @@ class HomeView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(
-                children: [
-                  const Text(
-                    'Team A',
-                    style: TextStyle(
-                      fontSize: 28,
-                    ),
-                  ),
-                  const Text(
-                    '0',
-                    style: TextStyle(fontSize: 150),
-                  ),
-                  CustomElevetedButtom(
-                    onPressed: () {},
-                    text: 'Add 1 point',
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  CustomElevetedButtom(
-                    onPressed: () {},
-                    text: 'Add 1 points',
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  CustomElevetedButtom(
-                    onPressed: () {},
-                    text: 'Add 3 points',
-                  ),
-                ],
+              TeamBoard(
+                teamName: 'Team A',
+                score: '0',
+                button1: () {},
+                button2: () {},
+                button3: () {},
               ),
               const SizedBox(
                 height: 500,
@@ -62,41 +38,16 @@ class HomeView extends StatelessWidget {
                   endIndent: 40,
                 ),
               ),
-              Column(
-                children: [
-                  const Text(
-                    'Team B',
-                    style: TextStyle(
-                      fontSize: 28,
-                    ),
-                  ),
-                  const Text(
-                    '0',
-                    style: TextStyle(fontSize: 150),
-                  ),
-                  CustomElevetedButtom(
-                    onPressed: () {},
-                    text: 'Add 1 point',
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  CustomElevetedButtom(
-                    onPressed: () {},
-                    text: 'Add 1 points',
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  CustomElevetedButtom(
-                    onPressed: () {},
-                    text: 'Add 3 points',
-                  ),
-                ],
-              )
+              TeamBoard(
+                teamName: 'Team B',
+                score: '0',
+                button1: () {},
+                button2: () {},
+                button3: () {},
+              ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           CustomElevetedButtom(
