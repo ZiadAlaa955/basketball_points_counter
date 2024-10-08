@@ -3,9 +3,16 @@ import 'package:basketball_points_counter/Widgets/team_board.dart';
 import 'package:basketball_points_counter/constants.dart';
 import 'package:flutter/material.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
   static String id = "homeView";
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  int scoreA = 0, scoreB = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +33,19 @@ class HomeView extends StatelessWidget {
             children: [
               TeamBoard(
                 teamName: 'Team A',
-                score: '0',
-                button1: () {},
-                button2: () {},
-                button3: () {},
+                score: scoreA,
+                button1: () {
+                  scoreA++;
+                  setState(() {});
+                },
+                button2: () {
+                  scoreA += 2;
+                  setState(() {});
+                },
+                button3: () {
+                  scoreA += 3;
+                  setState(() {});
+                },
               ),
               const SizedBox(
                 height: 500,
@@ -40,19 +56,32 @@ class HomeView extends StatelessWidget {
               ),
               TeamBoard(
                 teamName: 'Team B',
-                score: '0',
-                button1: () {},
-                button2: () {},
-                button3: () {},
+                score: scoreB,
+                button1: () {
+                  scoreB++;
+                  setState(() {});
+                },
+                button2: () {
+                  scoreB += 2;
+                  setState(() {});
+                },
+                button3: () {
+                  scoreB += 3;
+                  setState(() {});
+                },
               ),
             ],
           ),
           const SizedBox(
             height: 40,
           ),
-          CustomElevetedButtom(
-            onPressed: () {},
-            text: 'Reset',
+          CustomElevatedButton(
+            buttonName: 'Reset',
+            onPressed: () {
+              scoreA = 0;
+              scoreB = 0;
+              setState(() {});
+            },
           ),
         ],
       ),

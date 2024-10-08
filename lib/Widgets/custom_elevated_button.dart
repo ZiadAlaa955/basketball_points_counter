@@ -1,10 +1,11 @@
 import 'package:basketball_points_counter/constants.dart';
 import 'package:flutter/material.dart';
 
-class CustomElevetedButtom extends StatelessWidget {
-  const CustomElevetedButtom({super.key, this.onPressed, required this.text});
+class CustomElevatedButton extends StatelessWidget {
+  const CustomElevatedButton(
+      {super.key, this.onPressed, required this.buttonName});
   final void Function()? onPressed;
-  final String text;
+  final String buttonName;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,7 +19,7 @@ class CustomElevetedButtom extends StatelessWidget {
           ),
         ),
         child: Text(
-          text,
+          buttonName,
           style: const TextStyle(
             color: Colors.black,
           ),

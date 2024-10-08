@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 class TeamBoard extends StatelessWidget {
   const TeamBoard({
     super.key,
-    required this.teamName,
     required this.score,
     this.button1,
     this.button2,
     this.button3,
+    required this.teamName,
   });
 
-  final String teamName, score;
+  final String teamName;
+  final int score;
   final void Function()? button1, button2, button3;
 
   @override
@@ -25,26 +26,26 @@ class TeamBoard extends StatelessWidget {
           ),
         ),
         Text(
-          score,
+          score.toString(),
           style: const TextStyle(fontSize: 150),
         ),
-        CustomElevetedButtom(
-          onPressed: button3,
-          text: 'Add 1 point',
+        CustomElevatedButton(
+          onPressed: button1,
+          buttonName: 'Add 1 point',
         ),
         const SizedBox(
           height: 10,
         ),
-        CustomElevetedButtom(
+        CustomElevatedButton(
           onPressed: button2,
-          text: 'Add 1 points',
+          buttonName: 'Add 2 points',
         ),
         const SizedBox(
           height: 10,
         ),
-        CustomElevetedButtom(
+        CustomElevatedButton(
           onPressed: button3,
-          text: 'Add 3 points',
+          buttonName: 'Add 3 points',
         ),
       ],
     );
